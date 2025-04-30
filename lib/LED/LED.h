@@ -10,7 +10,14 @@
 #include <functional>
 
 // Pin definitions
-#define LED_PIN 2  // Built-in LED on most ESP32 boards
+#define LED_PIN 2 // Built-in LED on most ESP32 boards
+
+// Laser pins
+#define LASER_12V_PIN 26
+#define LASER_5V_PIN 21
+
+// Fan pin
+#define FAN_PIN 37
 
 // Digital pins (adjust as needed for your board)
 #define D1_PIN 1
@@ -23,16 +30,9 @@
 #define D8_PIN 35
 #define D9_PIN 36
 
-// Laser pins 
-#define LASER_12V_PIN 26
-#define LASER_5V_PIN 21
-
-// Fan pin
-#define FAN_PIN 37
-
 // PWM properties
 #define PWM_FREQUENCY 5000
-#define PWM_RESOLUTION 8  // 8-bit resolution, 0-255
+#define PWM_RESOLUTION 8 // 8-bit resolution, 0-255
 
 // Function declarations
 void setupLED();

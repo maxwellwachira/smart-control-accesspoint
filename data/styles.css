@@ -896,4 +896,6 @@ body {
 
 @media (max-width: 480px) {
     .logo {
-        max
+        max-width: 250px;
+    }
+}

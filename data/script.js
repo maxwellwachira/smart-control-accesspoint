@@ -65,6 +65,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Define all the pins we need to create
     const pinsList = [
+        { id: 'LASER-12V', type: 'laser-12v', icon: 'zap', endpoint: '/laser' },
+        { id: 'LASER-5V', type: 'laser-5v', icon: 'zap', endpoint: '/laser' },
+        { id: 'FAN', type: 'fan', icon: 'fan', endpoint: '/fan' },
         { id: 'LED', type: 'led', icon: 'bulb', endpoint: '/led' },
         { id: 'D1', type: 'digital', icon: 'chip', endpoint: '/digital' },
         { id: 'D2', type: 'digital', icon: 'chip', endpoint: '/digital' },
@@ -74,9 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 'D6', type: 'digital', icon: 'chip', endpoint: '/digital' },
         { id: 'D7', type: 'digital', icon: 'chip', endpoint: '/digital' },
         { id: 'D8', type: 'digital', icon: 'chip', endpoint: '/digital' },
-        { id: 'LASER-12V', type: 'laser-12v', icon: 'zap', endpoint: '/laser' },
-        { id: 'LASER-5V', type: 'laser-5v', icon: 'zap', endpoint: '/laser' },
-        { id: 'FAN', type: 'fan', icon: 'fan', endpoint: '/fan' }
     ];
 
     // Create pin cards

@@ -29,19 +29,6 @@ void setupLED()
     // Initialize LED to off
     ledcWrite(ledPwmChannel, 0);
 
-    // Setup digital pins with PWM
-    for (int i = 0; i < 8; i++)
-    {
-        ledcSetup(digitalPwmChannels[i], PWM_FREQUENCY, PWM_RESOLUTION);
-        ledcAttachPin(digitalPins[i], digitalPwmChannels[i]);
-        ledcWrite(digitalPwmChannels[i], 0);
-
-        // Initialize pin states in maps
-        String pinId = "D" + String(i + 1);
-        pinStates[pinId] = false;
-        pinBrightness[pinId] = 100; // Default to 100%
-    }
-
     // Setup laser pins with PWM
     ledcSetup(laserPwmChannels[0], PWM_FREQUENCY, PWM_RESOLUTION);
     ledcAttachPin(laserPins[0], laserPwmChannels[0]);
@@ -61,6 +48,19 @@ void setupLED()
     ledcWrite(fanPwmChannel, 0);
     pinStates["FAN"] = false;
     pinBrightness["FAN"] = 100;
+
+    // Setup digital pins with PWM
+    for (int i = 0; i < 8; i++)
+    {
+        ledcSetup(digitalPwmChannels[i], PWM_FREQUENCY, PWM_RESOLUTION);
+        ledcAttachPin(digitalPins[i], digitalPwmChannels[i]);
+        ledcWrite(digitalPwmChannels[i], 0);
+
+        // Initialize pin states in maps
+        String pinId = "D" + String(i + 1);
+        pinStates[pinId] = false;
+        pinBrightness[pinId] = 100; // Default to 100%
+    }
 }
 
 void updateLED()

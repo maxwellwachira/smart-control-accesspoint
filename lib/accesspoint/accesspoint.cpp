@@ -87,4 +87,9 @@ void handleGenericPinRequest(AsyncWebServerRequest *request, JsonVariant &json,
   
   // Process the pin update using the callback
   if (pinId != "") {
-   
+    callback(pinId, state, brightness);
+  }
+  
+  // Send response back
+  request->send(200, "application/json", "{\"success\":true}");
+}
