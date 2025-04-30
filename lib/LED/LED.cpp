@@ -333,7 +333,7 @@ void loadAllPinSettings()
 
     // Load fan pin
     bool fanState = preferences.getBool("FAN", false);
-    int fanBrightness = preferences.getInt("FAN-bright", 100);
+    int fanBrightness = preferences.getInt("FAN-brt", 100);
     updateFanPin("FAN", fanState, fanBrightness);
 
     preferences.end();
