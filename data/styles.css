@@ -9,10 +9,7 @@
     --shadow: rgba(0, 0, 0, 0.08);
     --toggle-width: 65px;
     --toggle-height: 32px;
-    --accent: #f59e0b;
     --accent-light: rgba(245, 158, 11, 0.2);
-    --led-color: #f59e0b;
-    --led-glow: rgba(245, 158, 11, 0.8);
 }
 
 * {
@@ -417,6 +414,7 @@ input:checked+.slider:before {
 
 
 @keyframes blink {
+
     0%,
     100% {
         opacity: 1;
